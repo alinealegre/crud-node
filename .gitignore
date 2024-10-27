@@ -1,2 +1,5 @@
+# Ignora o arquivo de variáveis de ambiente para proteger dados sensíveis
 .env
+
+# Ignora a pasta node_modules para evitar o upload de dependências
 node_modules/
