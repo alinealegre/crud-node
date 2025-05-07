@@ -1,59 +1,60 @@
-# CRUD Node.js API com Docker e MySQL
+# CRUD Node.js API with Docker and MySQL
 
-Este projeto é uma API CRUD para gerenciar empresas, construída com Node.js, TypeScript, Express, Sequelize e MySQL. O projeto utiliza Docker para containerização.
+This project is a CRUD API to manage companies, built with Node.js, TypeScript, Express, Sequelize, and MySQL. The project uses Docker for containerization.
 
-## Funcionalidades
+## Features
 
-- CRUD para empresas, incluindo:
-  - Razão Social
-  - CNPJ (não modificável após cadastro)
-  - Endereço, e-mails e telefones de contato
-- Ambiente de desenvolvimento containerizado com Docker e Docker Compose
+CRUD operations for companies, including:
 
-## Tecnologias
+- **Razão Social** (Company Name)  
+- **CNPJ** (Brazilian business ID – not editable after creation)  
+- Address, contact emails, and phone numbers  
+- Containerized development environment with Docker and Docker Compose
 
-- Node.js
-- Express
-- TypeScript
-- Sequelize (ORM)
-- MySQL
-- Docker e Docker Compose
+## Technologies
 
-## Instalação
+- Node.js  
+- Express  
+- TypeScript  
+- Sequelize (ORM)  
+- MySQL  
+- Docker & Docker Compose
 
-1. Clone o repositório:
-   git clone https://github.com/alinealegre/crud-node.git
+## Installation
 
-2. Instale as dependências:
-    npm install
+Clone the repository:  
+`git clone https://github.com/alinealegre/crud-node.git`
 
-3. Configure o arquivo .env com as credenciais do banco de dados.
+Install dependencies:  
+`npm install`
 
-## Executando o Projeto com Docker
-  docker-compose up -d
+Configure the `.env` file with your database credentials.
 
-Isso iniciará a API e o banco de dados MySQL em contêineres separados.
+## Running the Project with Docker
 
+```bash
+docker-compose up -d
 
-## Testando a API com Postman
+This will start the API and MySQL database in separate containers.
 
-Para facilitar os testes, é possível usar a coleção do Postman. Abaixo há duas opções de acesso: 
+## Testing the API with Postman
+To make testing easier, you can use the provided Postman collection. You have two options:
 
-### 1. Importar o Arquivo Local
+### 1. Import the Local File
 
-1. Baixe o arquivo `crud-node.postman_collection.json` na raiz do projeto.
-2. No Postman, clique em **File > Import**.
-3. Selecione o arquivo `crud-node.postman_collection.json`.
-4. A coleção será importada para o Postman e estará pronta para uso.
+Download the file crud-node.postman_collection.json from the project root.
+In Postman, go to File > Import.
+Select the crud-node.postman_collection.json file.
+The collection will be imported and ready to use.
 
-### 2. Acessar a Documentação Online
+### 2. Access the Online Documentation
 
-Você também pode acessar [Documentação da API no Postman](https://www.postman.com/docking-module-geologist-57881386/empresas-api/documentation/nkfl9gu/empresa-crud-api?workspaceId=fb32b872-6d9c-47bf-a04a-9836a38ae51)
-, que contém todas as rotas e detalhes de requisição.
+You can also access the Postman API Documentation (https://www.postman.com/docking-module-geologist-57881386/empresas-api/documentation/nkfl9gu/empresa-crud-api?workspaceId=fb32b872-6d9c-47bf-a04a-9836a38ae51), which includes all routes and request details.
 
-A coleção inclui as rotas principais:
-- **GET /empresas** - Lista todas as empresas
-- **GET /empresas/:cnpj** - Busca uma empresa pelo CNPJ
-- **POST /empresas** - Cria uma nova empresa
-- **PUT /empresas/:id** - Atualiza uma empresa (exceto CNPJ)
-- **DELETE /empresas/:id** - Exclui uma empresa
+Routes:
+
+GET /empresas – List all companies
+GET /empresas/:cnpj – Get a company by CNPJ
+POST /empresas – Create a new company
+PUT /empresas/:id – Update a company (except CNPJ)
+DELETE /empresas/:id – Delete a company
